@@ -6,7 +6,10 @@ const BookList = ({ books }) => {
             <h3>Book List</h3>
             <ul>
                 {books.map(book => (
-                    <Book key={book.id} {...book} />
+                    <Book
+                        key={book.id}
+                        {...book}
+                    />
                 ))}
             </ul>
         </div>

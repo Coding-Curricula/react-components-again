@@ -1,4 +1,7 @@
-const Book = ({ title, author, year }) => {
+const Book = (props) => {
+
+    const {title, author, year} = props
+
     return (
         <div>
             <ul>

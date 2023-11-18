@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import BookList from './components/BookList'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    const books = [
+        { id: 1, title: 'The Hobbit', author: 'J.R.R.Tolkien', year: 1937 },
+        { id: 2, title: '1984', author: 'George Orwell', year: 1949 },
+        { id: 3, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+    ]
+
+    return (
+        <div>
+            <h1>Book Library</h1>
+            <BookList books={books} />
+        </div>
+    )
 }
-
-export default App;
